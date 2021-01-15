@@ -1,0 +1,8 @@
+# MongoDB
+mongodb:
+ image: mvertes/alpine-mongo
+ container_name: api-mongodb
+ ports:
+  - 27017:27017
+ volumes:
+  - ./mongodb-data:/data/db
