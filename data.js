@@ -47,7 +47,7 @@ class DataRoute {
         r.post('/login', (req, res, next) => {
             obj.login(req, res, next);
         });
-        r.get("/users", DataRoute.isAuthJWT("conf.secrets.app"), (req, res, next) => {
+        r.get("/users", DataRoute.isAuthJWT(secret), (req, res, next) => {
             obj.users(req, res, next);
         });
 
