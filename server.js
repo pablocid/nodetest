@@ -61,7 +61,7 @@ class Server {
     }
 
     api(database) {
-        this.app.use('/api', DataRoute.route(database, this.secret));
+        this.app.use('/', DataRoute.route(database, this.secret));
     }
 }
 
